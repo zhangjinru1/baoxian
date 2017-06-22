@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/angular-1.4.6.min.js"></script>
+		<script src="../js/angular-route.min.js"></script>
+		<script src="../js/swiper.min.js"></script>
+		<link rel="stylesheet" href="../css/xunjiastyle.css" />
+		<link rel="stylesheet" href="../css/swiper.css" />
+		<link rel="stylesheet" href="../font/FortAwesome/css/font-awesome.css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<body ng-controller="ctrl">
+		<header>
+			<div><img src="../img/logo.png"/></div>
+			<div><a href="xunjia.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a></div>
+		</header>
+		<hr />
+		<div class="top">
+			<input type="text" placeholder="输入关键字"/>
+			<i class="fa fa-search" aria-hidden="true"></i>
+		</div>
+		<div class="swiper-container">
+		            <div class="swiper-wrapper">
+		                <div ng-repeat="item in lunbo" class="swiper-slide">
+		                	<img ng-src="{{item.name}}"/>
+		                </div>        
+		            </div>
+		            <!--分页-->
+		            <div class="swiper-pagination"></div>        
+		   </div>
+		   <div class="title">
+			   	<ul>
+			   		<li>
+			   			<a href="toubao.html"><img src="../img/baoxie_icon.png" alt="" /></a>
+			   			<p>我的投保</p>
+			   		</li>
+			   		<li>
+			   			<a href="xunjiaIn.html"><img src="../img/ec_order_icon.png" alt="" /></a>
+			   			<p>询价订单</p>
+			   		</li>
+			   		<li>
+			   			<a href="xunjiaIn.html"><img src="../img/order_icon.png" alt="" /></a>
+			   			<p>投保订单</p>
+			   		</li>
+			   		
+			   	</ul>
+		   </div>
+		   <div class="main">
+		   		<p>支持三大主流车险报价</p>
+		   		<p>我们将以最优惠的价格帮你买到最实惠的保单</p>
+		   </div>
+		   <div class="baoxian">
+			   	<ul>
+			   		<li ng-repeat="item in baoxian">
+			   			<a ng-href="{{item.href}}">
+				   			<img ng-src="{{item.tu}}"/>
+				   			<p ng-bind="item.title"></p>
+				   			<p ng-bind="item.cont"></p>
+			   			</a>
+			   		</li> 
+			   		
+			   	</ul>	
+		   </div>
+		 
+		
+			<footer>
+				<div></div>
+				<div>
+					<p>选择苏车宝</p>
+					<p>车险更优惠，为你节省更多资金！</p>
+				</div>
+				
+			</footer>
+	</body>
+	<script>
+		var app=angular.module("app",[]);
+		app.controller("ctrl",function($scope,$http){
+			$http.get("../data/xunjiadata.json").success(function(res){
+				console.log(res)
+				$scope.lunbo=res.img
+				$scope.baoxian=res.qwe
+				
+			})
+			
+		})
+		var swiper=new Swiper('.swiper-container',{            
+		            loop:true,            
+		            autoplay:1000,           
+		            pagination:'.swiper-pagination',            
+		            nextButton:'.swiper-button-next',           
+		            prevButton:'.swiper-button-prev',
+		            autoplayDisableOnInteraction:false,
+		            speed:2000           
+		        })
+		
+
+		
+	</script>
+</html>
+

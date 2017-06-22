@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none; }
+
+html {
+  font-size: 20px; }
+
+.header {
+  display: flex;
+  justify-content: space-between; }
+  .header div:nth-of-type(2) {
+    background: #FF7E00;
+    padding: 2%;
+    color: white;
+    height: 0.5rem;
+    width: 0.5rem;
+    text-align: center;
+    line-height: 0.5rem;
+    font-size: 0.4rem;
+    border-radius: 8px;
+    margin: 2%; }
+
+.baojia {
+  text-align: center;
+  padding: 3%;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  font-size: 0.3rem;
+  background: #F0F0F0; }
+
+.inputs {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 0.24rem; }
+  .inputs ul {
+    width: 100%;
+    text-align: left; }
+    .inputs ul .kuang {
+      width: 90%;
+      padding: 3%; }
+    .inputs ul li {
+      margin-top: 5%; }
+      .inputs ul li input {
+        border-radius: 5px; }
+  .inputs > div {
+    display: flex;
+    margin-top: 5%;
+    color: #999; }
+    .inputs > div p:nth-of-type(2) {
+      width: 75%;
+      height: 10px;
+      border-bottom: 1px dashed #ccc;
+      margin-left: 4%; }
+  .inputs .ul1 li {
+    margin-top: 5%; }
+  .inputs .ul1 .one {
+    display: flex;
+    justify-content: space-between; }
+  .inputs .ul1 select {
+    width: 96%;
+    padding: 3%;
+    border: 2px solid #CCCCCC;
+    border-radius: 5px; }
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 5%; }
+  footer button {
+    padding: 3% 10%;
+    border: none;
+    border-radius: 5px; }
+  footer button:nth-child(1) {
+    background: #FAFAFA;
+    border: 1px solid #DDDDDD;
+    margin-right: 11%;
+    padding-left: 12%; }
+    footer button:nth-child(1) a {
+      color: #999999; }
+  footer button:nth-child(2) {
+    background: #FF7800;
+    border: 1px solid #DDDDDD;
+    color: white; }
+
+.alert {
+  font-size: 0.25rem;
+  width: 90%;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  text-align: center;
+  position: fixed;
+  bottom: -42%;
+  left: 5%; }
+  .alert p:nth-child(1) {
+    padding: 3% 10%;
+    color: white;
+    background: red; }
+  .alert p:nth-child(2) {
+    background: white;
+    padding: 20% 10%; }
+  .alert p:nth-child(3) {
+    background: #F1F1F1;
+    padding: 4% 10%; }
+
+/*# sourceMappingURL=next.css.map */

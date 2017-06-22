@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/angular-1.4.6.min.js"></script>
+		<script src="../js/angular-route.min.js"></script>
+		<link rel="stylesheet" href="../css/morestyle.css" />
+		<script src="../js/rem.js"></script>
+		<link rel="stylesheet" href="../font/FortAwesome/css/font-awesome.css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<body ng-controller="ctrl">
+		<header>
+			<a href="../index.html"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+			<p>汽车列表</p>
+			<a href="xunjia.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+		</header>
+		<div class="top">
+			<select name="">
+				<option value="">综合</option>
+				<option value="">综合</option>
+				<option value="">综合</option>
+				
+			</select>
+			
+			<select name="">
+				<option value="">销量</option>
+				<option value="">综合</option>
+				<option value="">综合</option>
+				
+			</select>
+			
+			<select name="">
+				<option value="">价格</option>
+				<option value="">综合</option>
+				<option value="">综合</option>
+				
+			</select>
+		</div>
+		<div class="conts1" ng-repeat="item in list">
+			<div><img ng-src="{{item.img}}"/></div>
+			<ul>
+				<li ng-bind="item.title"></li>
+				<li ng-bind="item.pice"></li>
+				<li ng-bind="item.xiao"></li>
+			</ul>
+		</div>
+		<footer>
+			<a href="#">加载更多</a>
+		</footer>
+	</body>
+	<script>
+		var app=angular.module("app",[]);
+		app.controller("ctrl",function($scope,$http){
+			$http.get("../data/moredata.json").success(function(res){
+				console.log(res)
+				$scope.list=res.qwe
+			})
+		})
+	</script>
+</html>

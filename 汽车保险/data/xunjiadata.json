@@ -1,0 +1,19 @@
+{
+ "img":[
+        {"name":"../img/bananer_01.png"},
+        {"name":"../img/bananer_02.png"},
+        {"name":"../img/bananer_03.png"},
+        {"name":"../img/bananer_04.png"}
+        ],
+    "qwe":[
+           {"tu":"../img/logo_tpt.png","title":"2345单","cont":"保单销售","href":"baojia.html"},
+           {"tu":"../img/logo_zgpa.png","title":"2345单","cont":"保单销售","href":"baojia1.html"},
+           {"tu":"../img/logo_zgrm.png","title":"2345单","cont":"保单销售","href":"baojia2.html"},
+           {"tu":"../img/logo_zgrm.png","title":"2345单","cont":"保单销售","href":"baojia3.html"},
+           {"tu":"../img/logo_zgrm.png","title":"2345单","cont":"保单销售","href":"baojia4.html"},
+           {"tu":"../img/logo_zgrm.png","title":"2345单","cont":"保单销售","href":"baojia5.html"}
+          
+           ]
+   
+    
+}

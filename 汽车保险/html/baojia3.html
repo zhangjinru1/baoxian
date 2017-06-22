@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../font/FortAwesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="../css/baojia.css" />
+		<script src="../js/jquery.3.1.1.js"></script>
+		<script src="../js/rem.js"></script>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../js/LArea.css">
+		<script src="../js/LArea.js"></script>
+	</head>
+	<body>
+		<div class="header">
+			<div><img src="../img/logo.png"/></div>
+			<div><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+		</div>
+		<div class="baojia">车险报价</div>
+		<div><img src="../img/logo_zgrm.png" /></div>
+		
+		<div class="kuang">
+			<input type="text" placeholder="请输入城市" class="city1" name="input_area" id="demo1"/>
+			
+			<div>
+				<input type="text" placeholder="输入车牌号"/>
+				<input type="checkbox" />新车未上牌
+			</div>	
+		</div>
+		<div class="anniu">
+			<div class="baojia1"><button>查询报价</button></div>
+			<div><a href="xunjia.html"><button>从新选择</button></div></a>
+		</div>
+		<div class="div1">请输入城市名</div>
+		
+	</body>
+	<script>
+		var a=$(".city1").value
+		$(".baojia1").click(function(){
+			if(a==""){
+				$(".div1").css({"bottom":"30%","transition":"0.5s"})
+			}
+			else{
+				
+				location.href="baodanxunjia.html";
+				
+			}
+			
+		})
+		setTimeout(function(){
+			$(".div1").css({"bottom":"-10%","transition":"0.1s"})
+		},2500)
+		
+		var LAreaData1 = [{
+         "id": "2",
+         "name": "一级",
+         "child": [{
+              "id": "21",
+              "name": "二级1",
+              "child": [{
+                  "id": "211",
+                  "name": "三级1"
+             }, {
+                 "id": "212",
+                 "name": "三级2"
+             }, {
+                 "id": "213",
+                 "name": "三级3"
+             }]
+         }, {
+             "id": "22",
+             "name": "二级2"
+         }, {
+             "id": "23",
+             "name": "二级3"
+         }]
+     },
+     {
+         "id": "2",
+         "name": "一级",
+         "child": [{
+              "id": "21",
+              "name": "二级2",
+              "child": [{
+                  "id": "211",
+                  "name": "三级12"
+             }, {
+                 "id": "212",
+                 "name": "三级22"
+             }, {
+                 "id": "213",
+                 "name": "三级32"
+             }]
+         }, {
+             "id": "22",
+             "name": "二级22"
+         }, {
+             "id": "23",
+             "name": "二级32"
+         }]
+     }];
+
+	var area = new LArea();
+   	area.init({
+    'trigger': '#demo1',//触发选择控件的文本框，同时选择完毕后name属性输出到该位置
+    'valueTo':'#value1',//选择完毕后id属性输出到该位置
+    'keys':{id:'id',name:'name'},//绑定数据源相关字段 id对应valueTo的value属性输出 name对应trigger的value属性输出
+    'type':1,//数据源类型
+    'data':LAreaData1//数据源
+});
+
+	</script>
+	
+</html>

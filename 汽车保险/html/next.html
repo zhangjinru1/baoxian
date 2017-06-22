@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/rem.js"></script>
+		<link rel="stylesheet" href="../font/FortAwesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="../css/next.css" />
+		<link rel="stylesheet" href="../font/FortAwesome/css/font-awesome.css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<body>
+		<div class="header">
+			<div><img src="../img/logo.png"/></div>
+			<div><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+		</div>
+		<div class="baojia">保单险种选择添加</div>
+		<div class="inputs">
+			<ul class="ul">
+				<li><input type="checkbox"/>交强险</li>
+				<li><input type="text" placeholder="起保时间" class="kuang"/></li>
+				<li><input type="checkbox" />车船税</li>
+				<li><input type="text" placeholder="起保时间" class="kuang"/></li>
+				<li><input type="checkbox" />商业险</li>
+				<li><input type="text" placeholder="起保时间" class="kuang"/></li>
+				
+			</ul>
+			<div>
+				<p>基本险</p>
+				<p></p>
+			</div>
+			<ul class="ul1">
+				<li class="one">
+					<p>车辆损失险:</p>
+					<span><input type="checkbox" checked="checked"/>不计免赔</span>
+				</li>
+				<li>
+					<select>
+						<option >投保</option>
+						<option >不投保</option>
+						
+					</select>
+				</li>
+				<li class="one">
+					<p>第三方责任险:</p>
+					<span><input type="checkbox" checked="checked"/>不计免赔</span>
+				</li>
+				<li>
+					<select>
+						<option >2000</option>
+						<option >10000</option>
+						
+					</select>
+				</li>
+				<li class="one">
+					<p>全车盗抢险:</p>
+					<span><input type="checkbox" checked="checked"/>不计免赔</span>
+				</li>
+				<li>
+					<select>
+						<option >投保</option>
+						<option >不投保</option>
+						
+					</select>
+				</li>
+				<li class="one">
+					<p>司机座位责任险:</p>
+					<span><input type="checkbox" checked="checked"/>不计免赔</span>
+				</li>
+				<li>
+					<select>
+						<option >投保</option>
+						<option >不投保</option>
+						
+					</select>
+				</li>
+				<li class="one">
+					<p>乘客座位责任险:</p>
+					<span><input type="checkbox" checked="checked"/>不计免赔</span>
+				</li>
+				<li>
+					<select>
+						<option >投保</option>
+						<option >不投保</option>
+						
+					</select>
+				</li>
+				<li class="one">
+					<p>玻璃单独破碎险:</p>
+					<span><input type="checkbox" checked="checked"/>不计免赔</span>
+				</li>
+				<li>
+					<select>
+						<option >国产</option>
+						<option >进口</option>
+						
+					</select>
+				</li>
+				<li class="one">
+					<p>车身划痕险:</p>
+					<span><input type="checkbox" checked="checked"/>不计免赔</span>
+				</li>
+				<li>
+					<select>
+						<option >1200元</option>
+						<option >1800元</option>
+						<option >2200元</option>
+						<option >2800元</option>
+						<option >3200元</option>
+						
+					</select>
+				</li>
+				
+				<li class="one">
+					<p>涉水损失险:</p>
+					<span><input type="checkbox" checked="checked"/>不计免赔</span>
+				</li>
+				<li>
+					<select>
+						<option >1200元</option>
+						<option >1800元</option>
+						<option >2200元</option>
+						<option >2800元</option>
+						<option >3200元</option>
+						
+					</select>
+				</li>
+			</ul>
+		</div>
+		<footer>
+			<button><a href="baodanxunjia.html">上一步</a></button>
+			<button class="next" id="commit">提交保单</button>
+			
+		</footer>
+		<!--<div class="heise1"></div>-->
+		<div class="alert">
+			<p>提示框</p>
+			<p>提交成功，请耐心等待结果！</p>
+			<p class="queding">确定</p>
+		</div>
+	</body>
+	<script src="../js/jquery.3.1.1.js"></script>
+	<script>
+		$("#commit").click(function(){
+			$(".alert").css({"bottom":"30%","transition":"1s"})
+		})
+		$(".queding").click(function(){
+			location.href="xunjia.html";
+		})
+	</script>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/angular-1.4.6.min.js"></script>
+		<script src="../js/angular-route.min.js"></script>
+		<link rel="stylesheet" href="../css/ming.css" />
+		<link rel="stylesheet" href="../font/FortAwesome/css/font-awesome.css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<body ng-controller="ctrl">
+		<header>
+			<a href="xunjia.html"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+			<p>保单明细</p>
+			<i class="fa fa-home" aria-hidden="true"></i>
+		</header>
+		<div class="main">
+			<div ng-repeat="item in list">
+				<div ng-bind="item.name"></div>
+				<p>
+					<span ng-bind="item.title"></span>
+					<span ng-bind="item.title1"></span>
+				</p>
+				<p>
+					<span ng-bind="item.title2"></span>
+					<span ng-bind="item.title3"></span>
+				</p>
+				<p>
+					<span ng-bind="item.title4"></span>
+					<span ng-bind="item.title5"></span>
+				</p>
+				
+			</div>
+		</div>
+		<div class="main1">
+			<div>车辆信息</div>
+			<p>
+				<span>品牌型号：</span>
+				<span>广汽传祺GS4 2017款235T</span>
+			</p>
+			<p>
+				<span>投保城市：</span>
+				<span>江苏省南京市</span>
+			</p>
+			<p>
+				<span>保险公司：</span>
+				<span>太平洋保险</span>
+			</p>
+			<p>
+				<span>车辆所属：</span>
+				<span>个人</span>
+			</p>
+			<p>
+				<span>注册登记：</span>
+				<span>2014-3-4</span>
+			</p>
+			<p>
+				<span>识别码：</span>
+				<span>GFDD3345552</span>
+			</p>
+			<p>
+				<span>发动机号：</span>
+				<span>16838746643</span>
+			</p>
+			<p>
+				<span>车辆类型：</span>
+				<span>轿车</span>
+			</p>
+			<p>
+				<span>燃油类型：</span>
+				<span>汽油</span>
+			</p>
+			<p>
+				<span>车船税：</span>
+				<span>正常缴纳</span>
+			</p>
+			<p>
+				<span>是否过户：</span>
+				<span>否</span>
+			</p>
+		</div>
+		<div class="main3">
+			<div>投保信息（报价详细）</div>
+			
+			<div>
+				<p>交强险：投保</p>
+				<p>保费：等待统计</p>
+			</div>
+			<div>生效时间：2017-2-11 12时</div>
+			<hr />
+			<div>车船税：正常缴纳</div>
+			<div class="bx">
+				<p>商业保险：投保</p>
+				<p>保费：等待统计</p>
+			</div>
+			<div>生效时间：2017-2-11 12时</div>
+			<hr />
+		</div>
+		<div class="cont" ng-repeat="item in quan">
+			<p ng-bind="item.name"></p>
+			<p ng-bind="item.title"></p>
+			<p ng-bind="item.pice"></p>
+		</div>
+		<p class="last">保单总价：￥<span>3456</span>元</p>
+	</body>
+	<script>
+		var app=angular.module("app",[]);
+		app.controller("ctrl",function($scope,$http){
+			$http.get("../data/ming.json").success(function(res){
+				$scope.list=res.qwe
+				$scope.quan=res.asd
+			})
+		})
+	</script>
+</html>

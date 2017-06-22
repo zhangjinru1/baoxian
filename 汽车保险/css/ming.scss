@@ -1,0 +1,127 @@
+@charset"UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    background: #2A8CDC;
+    padding: 2% 2%;
+    font-size: 1.2rem;
+    color: white;
+    p{
+        font-size: 1rem;
+    }
+    a{
+        color: white;
+        }
+}
+.main{
+    div:nth-child(1){
+        >div{
+            color: #FF6647;
+            border-bottom: 1px dotted #ccc;
+            padding: 3%;
+        }
+        >p{
+            margin-top: 5%;
+            padding: 3%;
+            span:nth-child(1){
+                color: #999999;
+            }
+        }
+    }
+    div:nth-child(2){
+        >div{
+            background: #F8F8F8;
+            padding: 3%;
+            border: 1px solid #DDDDDD;
+        }
+        >p{
+            margin-top: 5%;
+            padding: 3%;
+            span:nth-child(1){
+                color: #999999;
+            }
+        }
+    }
+}
+.main1{
+    div{
+        background: #F8F8F8;
+        border: 1px solid #ccc;
+        padding: 3%;
+    }
+    p{
+        margin-top: 5%;
+        padding: 3%;
+        span:nth-child(1){
+            color: #999999;
+        }
+        
+    }
+}
+.main3{
+//  padding: 3%;
+    div:nth-child(1){
+        background: #F8F8F8;
+        color: #666;
+        padding: 3%;
+        border: 1px solid #ccc;
+    }
+    div:nth-of-type(2){
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px dotted #ccc;
+        align-items: center;
+        padding: 3%;
+        p:nth-of-type(2){
+            color: #FF5155;
+            padding: 3%;
+        }
+    }
+    div{
+        margin-top: 5%;
+        padding: 3%;
+    }
+   
+    .bx{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       border-bottom: 1px dotted #ccc;
+       
+        p:nth-of-type(2){
+            color: #FF5155;
+            padding: 3%;
+        }
+    }
+    div:nth-last-of-type{
+        padding-bottom: 5%;
+    }
+}
+.cont{
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+    margin-top: 3%;
+    border-bottom: 1px dotted #ccc;
+    p:nth-of-type(3){
+        color: #FF6600;
+    }
+}
+.last{
+    float: right;
+    padding: 3%;
+    color:#B29999;
+    span{
+        color: #FF4246;
+        font-size: 2.3rem;
+    }
+}

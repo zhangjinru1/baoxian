@@ -1,0 +1,201 @@
+@charset"UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+html{
+    font-size: 20px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    div:nth-of-type(2){
+        background: #FF7E00;
+        padding: 2%;
+        color:white;
+        height: 0.5rem;
+        width: 0.5rem;
+        text-align: center;
+        line-height: 0.5rem;
+        font-size: 0.4rem;
+        border-radius: 8px;
+        margin: 2%;
+    }
+}
+.baojia{
+    text-align: center;
+    padding: 3%;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    font-size: 0.3rem;
+    background: #F0F0F0;
+}
+.xinxi{
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    
+    font-size: 0.25rem;
+    display: flex;
+    .line{
+        border-left: 4px solid #FF7E00;
+    }
+    p{
+        padding: 2%;
+    }
+}
+.neirong{
+    padding: 5%;
+    font-size: 0.26rem;
+    border-bottom: 1px dashed #ccc;
+    p{
+        margin-top: 6%;
+    }
+    p:nth-of-type(1){
+       color: #FF6600;
+       font-size: 0.22rem; 
+       background: #FFF2D5;
+       padding: 3%;
+       border-radius: 3px;
+       margin-bottom: 8%;
+    }
+    .city{
+        color: #999999;
+
+    }
+}
+.input{
+    font-size: 0.26rem;
+    padding: 3%;
+    input{
+        margin-top: 8%;
+        padding: 3%;
+        width: 90%;
+        border-radius: 5px;
+    }
+    >div{
+        display: flex;
+        position: relative;
+        button{
+            position: absolute;
+            left: 78%;
+            top: 41%;
+            padding: 3%;
+            border-radius: 3px;
+            background: #F9F9F9;
+            color: #A9A9A9;
+            border: none;
+            border: 1px solid #DDDDDD;
+        }
+    }
+    >p{
+        margin-top: 5%;
+        span:nth-child(1){
+            color:red;
+        }
+    }
+    
+}
+.user{
+    padding: 5%;
+    border-bottom: 1px dashed #ccc;
+    >p:nth-child(1){
+        color: #FF6600;
+       font-size: 0.22rem; 
+       background: #FFF2D5;
+       padding: 3%;
+       border-radius: 3px;
+    }
+    input{
+        margin-top: 8%;
+        padding: 3%;
+        width: 90%;
+        border-radius: 5px;
+    }
+    
+}
+footer{
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+    button{
+
+        padding: 3% 15%;
+        border: none;
+
+    }
+    button:nth-child(1){
+        background: #FAFAFA;
+        color: #999999;
+        border: 1px solid #DDDDDD;
+        
+    }
+     button:nth-child(2){
+        background: #FF7800;
+        border: 1px solid #DDDDDD;
+        margin-left: 7%;
+        a{
+            color: white;
+            
+        }
+    }
+}
+//.motai{
+//  width: 100%;
+//  height:100%;
+//  background: rgba(0,0,0,0.5);
+////  position: relative;
+//  z-index: 999;
+////  position: fixed;
+////  display: none;
+//  
+//}
+.div{
+        font-size: 0.3rem;
+         border: 1px solid #ccc;
+         border-radius: 10px;
+         position: absolute;
+         top: 60%;
+         left: 15%;
+         display: none;
+        p:nth-child(1){
+            text-align: center;
+            padding: 20% 10%;
+            background: rgba(0,0,0,0.3);
+            color: white;
+            border-bottom: 1px solid white;
+        }
+        p:nth-child(2){
+            text-align: center;
+            padding: 5% 10%;
+            color: dodgerblue;
+            background: rgba(0,0,0,0.1);
+        }
+  }
+  #xinghao{
+      color: white;
+      width: 40%;
+      height: 10%;
+      font-size: 0.24rem;
+      padding: 3% 10%;
+//    margin: 0 auto;
+      text-align: center;
+      border-radius: 8px;
+      background: rgba(0,0,0,0.5);
+      position: fixed;
+      bottom: -50%;
+  }
+  #date{
+      color: white;
+      width: 40%;
+      height: 10%;
+      font-size: 0.24rem;
+      padding: 3% 10%;
+//    margin: 0 auto;
+      text-align: center;
+      border-radius: 8px;
+      background: rgba(0,0,0,0.5);
+      position: fixed;
+      bottom: -50%;
+  }

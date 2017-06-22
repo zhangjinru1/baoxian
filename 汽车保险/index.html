@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/angular-1.4.6.min.js"></script>
+		<script src="js/angular-route.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+		
+		<link rel="stylesheet" href="css/carstyle.css" />
+		<link rel="stylesheet" href="css/swiper.css" />
+		<link rel="stylesheet" href="font/FortAwesome/css/font-awesome.css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<body ng-controller="ctrl">
+		<header>
+			<div><img src="img/logo.png"/></div>
+			<div><a href="html/center.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a></div>
+		</header>
+		<hr />
+		<div class="top">
+			<input type="text" placeholder="输入关键字"/>
+			<i class="fa fa-search" aria-hidden="true"></i>
+		</div>
+		<div class="swiper-container">
+		            <div class="swiper-wrapper">
+		                <div ng-repeat="item in lunbo" class="swiper-slide">
+		                	<img ng-src="{{item.name}}"/>
+		                </div>        
+		            </div>
+		            <!--分页-->
+		            <div class="swiper-pagination"></div>        
+		   </div>
+		   <div class="title">
+			   	<ul>
+			   		<li><a href="#"><img src="img/home.png" /><p>首页</p></a></li>
+			   		<li><a href="html/more.html"><img src="img/car.png"/><p>商城</p></a></li>
+			   		<li><a href="html/xunjia.html"><img src="img/Auto_insurance.png"/><p>询价</p></a></li>
+			   		<li><a href="#"><img src="img/Inquire.png"/><p>查询</p></a></li>
+			   	</ul>
+		   </div>
+		   <div class="main">
+		   		<p>支持三大主流车险报价</p>
+		   		<p>我们将以最优惠的价格帮你买到最实惠的保单</p>
+		   </div>
+		   <div class="baoxian">
+			   	<ul>
+			   		<li ng-repeat="item in baoxian">
+			   			<img ng-src="{{item.tu}}"/>
+			   			<p ng-bind="item.title"></p>
+			   			<p ng-bind="item.cont"></p>
+			   		</li>
+			   	</ul>	
+		   </div>
+		   <div class="cars">
+		   		<p>汽车商场</p>
+		   		<button>+更多</button>
+		   </div>
+		   <div class="logo1">
+		   		<ul>
+		   			<li><img src="img/icon_logo_01.png" alt="" /></li>
+		   			<li><img src="img/icon_logo_03.png" alt="" /></li>
+		   			<li><img src="img/icon_logo_13.png" alt="" /></li>
+		   			<li><img src="img/icon_logo_15.png" alt="" /></li>
+		   			<li><img src="img/icon_logo_01.png" alt="" /></li>
+		   			<li><img src="img/icon_logo_13.png" alt="" /></li>
+		   			<li><img src="img/icon_logo_03.png" alt="" /></li>
+		   			
+		   		</ul>
+		   </div>
+		   <div class="conts">
+		   		<ul ng-repeat="item in che">
+		   			<li>
+		   				<img ng-src="{{item.img}}"/>
+		   				<span>
+		   					<p ng-bind="item.title"></p>
+		   					<p ng-bind="item.title1"></p>
+		   				</span>
+		   				
+		   				<p ng-bind="item.title2"></p>
+		   			</li>
+		   		</ul>
+		   </div>
+		   <a class="more" href="html/more.html">查看更多</a>
+		   <div class="login">
+		   		<a href="html/center.html"><p>登录</p></a>
+		   		<p>|</p>
+		   		<p>注册</p>
+		   </div>
+		   <footer>
+		   		<p>copynight©2006-2017苏车宝汽车服务平台版权所有</p>
+		   		<p>苏ICP备xxxxxxxxxx号</p>
+		   </footer>
+	</body>
+	<script>
+		var app=angular.module("app",[]);
+		app.controller("ctrl",function($scope,$http){
+			$http.get("data/data.json").success(function(res){
+				console.log(res)
+				$scope.lunbo=res.img
+				$scope.baoxian=res.qwe
+				$scope.che=res.cars
+			})
+		
+		})
+		var swiper=new Swiper('.swiper-container',{            
+		            loop:true,            
+		            autoplay:1000,           
+		            pagination:'.swiper-pagination',            
+		            nextButton:'.swiper-button-next',           
+		            prevButton:'.swiper-button-prev',
+		            autoplayDisableOnInteraction:false,
+		            speed:2000           
+		        })
+	</script>
+</html>

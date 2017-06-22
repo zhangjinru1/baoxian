@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/fanmian.css" />
+		<link rel="stylesheet" href="../font/FortAwesome/css/font-awesome.css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<body>
+		<header>
+			<a href="buy.html"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+			<p>完善资料</p>
+			<i class="fa fa-home" aria-hidden="true"></i>
+		</header>
+		<div class="top">
+			<p>清晰度可变，确保本人的身份证只有图片添加完整才能完成购买。</p>
+		</div>
+
+		<div class="zheng">
+			<p class="pp">身份证</p>
+			<div><img src="../img/sfz-z.jpg"/></div>
+			<p>身份证正面</p>
+			<div><img src="../img/sfz-f.jpg"/></div>
+			<p>身份证反面</p>
+		</div>
+		<div class="a1" ><button class="next">提交购买</button></div>
+		<div class="goumai">			
+			
+				<p>提示框</p>
+				<p>本次购买需支付保费</p>
+				<p>3456<span>/年</span></p>
+				<p>保单有效期为24小时，24小时之后保单将失效，请及时付款。</p>
+				<p class="last"><button>取消</button><button>确定</button></p>
+			
+		</div>
+		<div class="hei" style="display: none;"></div>
+	</body>
+	<script src="../js/jquery.3.1.1.js"></script>
+	<script>
+		$(".next").click(function(){
+			$(".hei").css({"background":"rgba(0,0,0,0.5)","display":"block"})
+			$(".goumai").css({"bottom":"0","transition":"0.5s","zIndex":"999"})
+		})
+		$(".last").click(function(){
+			$(".goumai").css({"bottom":"-43%","transition":"0s"})
+			$(".hei").css({"background":"rgba(0,0,0,0.5)","display":"none"})
+			
+		})
+	</script>
+</html>
