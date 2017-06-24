@@ -1,0 +1,20 @@
+{
+ "img":[
+        {"name":"img/bananer_01.png"},
+        {"name":"img/bananer_02.png"},
+        {"name":"img/bananer_03.png"},
+        {"name":"img/bananer_04.png"}
+        ],
+    "qwe":[
+           {"tu":"img/logo_tpt.png","title":"2345单","cont":"保单销售"},
+           {"tu":"img/logo_zgpa.png","title":"1234单","cont":"保单销售"},
+           {"tu":"img/logo_zgrm.png","title":"3445单","cont":"保单销售"}
+           ],
+      "cars":[
+              {"img":"img/2.jpg","title":"￥30.3万起","title1":"￥40万起","title2":"丰田 凯黄瑞 2016款 2.0E 十周年纪念精英版  零首付"},
+              {"img":"img/3.jpg","title":"￥30.3万起","title1":"￥40万起","title2":"丰田 凯黄瑞 2016款 2.0E 十周年纪念精英版  零首付"},
+              {"img":"img/4.jpg","title":"￥30.3万起","title1":"￥40万起","title2":"丰田 凯黄瑞 2016款 2.0E 十周年纪念精英版  零首付"},
+              {"img":"img/5.jpg","title":"￥30.3万起","title1":"￥40万起","title2":"丰田 凯黄瑞 2016款 2.0E 十周年纪念精英版  零首付"}
+              ]
+    
+}

@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none; }
+
+html {
+  font-size: 20px; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background: #2A8CDC;
+  align-items: center;
+  padding: 3% 2%;
+  font-size: 0.4rem;
+  color: white;
+  font-weight: bold; }
+  header p {
+    font-size: 0.28rem;
+    margin-left: 5%; }
+  header a {
+    color: white; }
+
+.xinxi {
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  font-size: 0.25rem;
+  display: flex; }
+  .xinxi .line {
+    border-left: 4px solid #FF7E00; }
+  .xinxi p {
+    padding: 4%; }
+
+.neirong {
+  padding: 5%;
+  font-size: 0.26rem;
+  border-bottom: 1px dashed #ccc; }
+  .neirong p {
+    margin-top: 6%; }
+  .neirong p:nth-of-type(1) {
+    color: #FF6600;
+    font-size: 0.22rem;
+    background: #FFF2D5;
+    padding: 3%;
+    border-radius: 3px;
+    margin-bottom: 8%; }
+  .neirong .city {
+    color: #999999; }
+
+.input {
+  font-size: 0.26rem;
+  padding: 3%; }
+  .input input {
+    margin-top: 8%;
+    padding: 3%;
+    width: 90%;
+    border-radius: 5px; }
+  .input > div {
+    display: flex;
+    position: relative; }
+    .input > div button {
+      position: absolute;
+      right: 3%;
+      bottom: 0.5px;
+      padding: 3%;
+      border-radius: 3px;
+      background: #F9F9F9;
+      color: #A9A9A9;
+      border: none;
+      border: 1px solid #DDDDDD; }
+    .input > div form {
+      width: 100%; }
+      .input > div form input {
+        width: 90%; }
+  .input > p {
+    margin-top: 5%; }
+    .input > p span:nth-child(1) {
+      color: red; }
+
+.user {
+  padding: 5%;
+  border-bottom: 1px dashed #ccc; }
+  .user > p:nth-child(1) {
+    color: #FF6600;
+    font-size: 0.22rem;
+    background: #FFF2D5;
+    padding: 3%;
+    border-radius: 3px; }
+  .user input {
+    margin-top: 8%;
+    padding: 3%;
+    width: 90%;
+    border-radius: 5px; }
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 5%; }
+  footer button {
+    padding: 3% 15%;
+    border: none; }
+  footer button:nth-child(1) {
+    background: #FAFAFA;
+    border: 1px solid #DDDDDD; }
+    footer button:nth-child(1) a {
+      color: #999999; }
+  footer button:nth-child(2) {
+    background: #FF7800;
+    border: 1px solid #DDDDDD;
+    margin-left: 7%;
+    color: white; }
+
+.div {
+  font-size: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  position: absolute;
+  top: 60%;
+  width: 80%;
+  margin: 0 10%;
+  display: none; }
+  .div p:nth-child(1) {
+    text-align: center;
+    padding: 3% 10%;
+    background: red;
+    color: white;
+    border-bottom: 1px solid white; }
+  .div p:nth-child(2) {
+    text-align: center;
+    padding: 10% 10%;
+    background: white; }
+  .div p:nth-child(3) {
+    text-align: center;
+    padding: 3% 10%;
+    background: rgba(0, 0, 0, 0.1);
+    color: dodgerblue; }
+
+#xinghao {
+  color: white;
+  width: 60%;
+  height: 6%;
+  font-size: 0.24rem;
+  padding: 3% 10%;
+  text-align: center;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  bottom: -50%;
+  left: 10%; }
+
+#date {
+  color: white;
+  width: 60%;
+  height: 6%;
+  font-size: 0.24rem;
+  padding: 3% 10%;
+  text-align: center;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  bottom: -50%;
+  left: 10%; }
+
+/*# sourceMappingURL=baodanxunjia.css.map */

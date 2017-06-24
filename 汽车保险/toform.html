@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form name="form" action="#">
+			<input type="text" name="input1">
+			<input type="button" onclick="Post()" value="Post">
+		</form>
+	</body>
+	<script language="javascript" >
+function Post()
+{
+	
+url = "form.html?name="+escape(document.form.input1.value);
+location.href=url;
+}
+</script>
+</html>

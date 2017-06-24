@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+html {
+  font-size: 20px; }
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+  font-size: 0.3rem;
+  color: white;
+  background: red; }
+  .top a {
+    color: white; }
+
+.main {
+  border-bottom: 1px solid #ccc;
+  padding: 5%;
+  font-size: 0.24rem;
+  font-weight: bold; }
+  .main > p span:nth-child(1) {
+    color: #999; }
+  .main > p span:nth-child(2) {
+    color: #FF4351; }
+
+.main1 {
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  border-bottom: 1px dotted #ccc; }
+  .main1 > div {
+    border-right: 1px dashed #ccc;
+    padding-right: 5%; }
+    .main1 > div p:nth-child(1) {
+      color: #FF6702;
+      font-size: 0.26rem;
+      margin-bottom: 3%; }
+    .main1 > div p:nth-child(2) {
+      color: #ccc;
+      font-size: 0.22rem; }
+  .main1 > p {
+    font-size: 0.3rem;
+    color: #FF4351;
+    padding-left: 5%; }
+
+/*# sourceMappingURL=searchIn.css.map */

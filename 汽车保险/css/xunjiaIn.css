@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background: #2A8CDC;
+  align-items: center;
+  padding: 2% 2%;
+  font-size: 1.7rem;
+  color: white; }
+  header p {
+    font-size: 1.2rem;
+    margin-left: 5%; }
+  header a {
+    color: white; }
+
+.topp {
+  background: #F0F0F0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.5rem;
+  padding: 2%; }
+  .topp span:nth-child(1) {
+    color: #999999; }
+  .topp span:nth-child(2) {
+    color: black; }
+  .topp > p {
+    color: #999; }
+
+.cont {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.5rem;
+  padding: 3%;
+  align-items: center;
+  border-bottom: 1px dotted #ccc; }
+  .cont .one > p:nth-child(1) {
+    font-size: 1.2rem; }
+  .cont .one > p:nth-child(2) {
+    color: #999999; }
+  .cont .line {
+    width: 1px;
+    height: 40px;
+    border-right: 1px dotted #ccc; }
+  .cont .p {
+    color: #FF6600; }
+
+.ming {
+  display: flex;
+  justify-content: space-between;
+  padding: 3%; }
+  .ming > div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; }
+    .ming > div a:nth-child(1) {
+      width: 30%; }
+  .ming a:nth-child(2) {
+    width: 26%; }
+  .ming button {
+    padding: 5% 13%;
+    color: #B9B9B9;
+    background: #FAFAFA;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px; }
+  .ming .bao {
+    background: #2A9AFA;
+    color: white; }
+
+.neirong {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 3%;
+  margin-bottom: 3%; }
+
+footer {
+  width: 100%;
+  height: 8%;
+  position: absolute;
+  bottom: 0;
+  background: #F3F3F3; }
+
+/*# sourceMappingURL=xunjiaIn.css.map */

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />-->
+		<title></title>
+		<script src="js/angular-1.4.6.min.js"></script>
+		<script src="js/angular-route.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/jquery-1.7.2.min.js"></script>
+		<script src="js/jcfilter.min.js"></script>
+		<link rel="stylesheet" href="css/carstyle.css" />
+		<link rel="stylesheet" href="css/swiper.css" />
+		<link rel="stylesheet" href="font/FortAwesome/css/font-awesome.css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<body ng-controller="ctrl">
+		<header>
+			<div><img src="img/logo.png"/></div>
+			<div><a href="html/center.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a></div>
+		</header>
+	
+		<div class="top">
+			<input type="text" placeholder="输入关键字" id="filter"/>
+			<i class="fa fa-search" aria-hidden="true"></i>
+		</div>
+		<div class="swiper-container">
+		            <div class="swiper-wrapper">
+		                <div ng-repeat="item in lunbo" class="swiper-slide">
+		                	<img ng-src="{{item.name}}"/>
+		                </div>        
+		            </div>
+		            
+		            <div class="swiper-pagination"></div>        
+		   </div>
+		   <div class="title">
+			   	<ul>
+			   		<li><a href="#"><img src="img/home.png" /><p>首页</p></a></li>
+			   		<li><a href="html/more.html"><img src="img/car.png"/><p>商城</p></a></li>
+			   		<li><a href="html/xunjia.html"><img src="img/Auto_insurance.png"/><p>询价</p></a></li>
+			   		<li><a href="#"><img src="img/Inquire.png"/><p>查询</p></a></li>
+			   	</ul>
+		   </div>
+		   <div class="main">
+		   		<p>支持三大主流车险报价</p>
+		   		<p>我们将以最优惠的价格帮你买到最实惠的保单</p>
+		   </div>
+		   <div class="baoxian">
+			   	<ul>
+			   		<li ng-repeat="item in baoxian" class="jcorgFilterTextParent">
+			   			<img ng-src="{{item.tu}}"/>
+			   			<p ng-bind="item.title"  class="jcorgFilterTextChild"></p>
+			   			<p ng-bind="item.cont"  class="jcorgFilterTextChild"></p>
+			   		</li>
+			   	</ul>	
+		   </div>
+		   <div class="cars">
+		   		<p>汽车商场</p>
+		   		<!--<button>+更多</button>-->
+		   </div>
+		   <div class="logo1">
+		   		<ul>
+		   			<li><img src="img/icon_logo_01.png" alt="" /></li>
+		   			<li><img src="img/icon_logo_03.png" alt="" /></li>
+		   			<li><img src="img/icon_logo_13.png" alt="" /></li>
+		   			<li><img src="img/icon_logo_15.png" alt="" /></li>
+		   			<li><img src="img/icon_logo_01.png" alt="" /></li>
+		   			<li><img src="img/icon_logo_13.png" alt="" /></li>
+		   			<li><img src="img/icon_logo_03.png" alt="" /></li>
+		   			
+		   		</ul>
+		   </div>
+		   <div class="conts">
+		   		<ul ng-repeat="item in che">
+		   			<li>
+		   				<img ng-src="{{item.img}}"/>
+		   				<span>
+		   					<p ng-bind="item.title"></p>
+		   					<p ng-bind="item.title1"></p>
+		   				</span>
+		   				
+		   				<p ng-bind="item.title2" class="jcorgFilterTextChild"></p>
+		   			</li>
+		   		</ul>
+		   </div>
+		   <a class="more" href="html/more.html">查看更多</a>
+		   <div class="login">
+		   		<a href="html/center.html"><p>登录</p></a>
+		   		<p>|</p>
+		   		<p>注册</p>
+		   </div>
+		   <footer>
+		   		<p>copynight©2006-2017苏车宝汽车服务平台版权所有</p>
+		   		<p>苏ICP备xxxxxxxxxx号</p>
+		   </footer>
+	</body>
+	<script>
+		var app=angular.module("app",[]);
+		app.controller("ctrl",function($scope,$http,$timeout){
+			$http.get("data/data.json").success(function(res){
+				console.log(res)
+				$scope.lunbo=res.img
+				$scope.baoxian=res.qwe
+				$scope.che=res.cars
+			})
+			$timeout(function(){
+				var swiper=new Swiper('.swiper-container',{            
+		            loop:true,            
+		            autoplay:1000,           
+		            pagination:'.swiper-pagination',            
+		            nextButton:'.swiper-button-next',           
+		            prevButton:'.swiper-button-prev',
+		            autoplayDisableOnInteraction:false,
+		            speed:1000           
+		        })
+			},1500)
+		
+		})
+	jQuery(document).ready(function(){
+        jQuery("#filter").jcOnPageFilter({
+            animateHideNShow: true,//是否启用隐藏和显示区域时的动画效果
+            focusOnLoad:true,//插件启动时是否自动聚焦到输入框
+            highlightColor:'#FFFF00',//高亮背景色
+            textColorForHighlights:'#000000',//高亮文字色
+            caseSensitive:false,//是否区分大小写
+            hideNegatives:true,//是否不显示无结果的区域
+            parentLookupClass:'jcorgFilterTextParent',//元素的父框架Class，如果子元素中无结果则隐藏整个框架
+            childBlockClass:'jcorgFilterTextChild'//要在哪些元素中显示，元素Class名
+        });
+    }); 
+	</script>
+</html>
